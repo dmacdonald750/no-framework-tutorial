@@ -33,11 +33,6 @@ namespace Example;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-error_reporting(E_ALL);
-
-$environment = 'development';
-
-/**
 * Register the error handler
 */
 $whoops = new \Whoops\Run;
