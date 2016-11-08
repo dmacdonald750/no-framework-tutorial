@@ -10,14 +10,19 @@ An alternative package would be: [PHP-Error](https://github.com/JosephLenton/PHP
 
 Install the new package,
 
-```
+```php
 composer require filp/whoops
 ```
 
 But you can't use it yet. PHP won't know where to find the files for the classes. For this you will need an autoloader, ideally a [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloader. Composer already takes care of this for you, so you only have to add a `require __DIR__ . '/../vendor/autoload.php';` to your `Bootstrap.php`.
 
-Now register the error handler:
+Now add the error handler to your code:
 
+```php
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
+```
 
 Then after the error handler registration, throw an `Exception` to test if everything is working correctly. Your `Bootstrap.php` should now look similar to this:
 
@@ -36,13 +41,7 @@ $environment = 'development';
 * Register the error handler
 */
 $whoops = new \Whoops\Run;
-if ($environment !== 'production') {
-    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-} else {
-    $whoops->pushHandler(function($e){
-        echo 'Todo: Friendly error page and send an email to the developer';
-    });
-}
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
 throw new \Exception;
