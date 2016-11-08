@@ -8,13 +8,15 @@ I like [filp/whoops](https://github.com/filp/whoops), so I will show how you can
 
 An alternative package would be: [PHP-Error](https://github.com/JosephLenton/PHP-Error)
 
-To install a new package,
+Install the new package,
 
 ```
 composer require filp/whoops
 ```
 
 But you can't use it yet. PHP won't know where to find the files for the classes. For this you will need an autoloader, ideally a [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloader. Composer already takes care of this for you, so you only have to add a `require __DIR__ . '/../vendor/autoload.php';` to your `Bootstrap.php`.
+
+Now register the error handler:
 
 
 Then after the error handler registration, throw an `Exception` to test if everything is working correctly. Your `Bootstrap.php` should now look similar to this:
