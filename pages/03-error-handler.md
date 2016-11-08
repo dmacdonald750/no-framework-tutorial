@@ -10,16 +10,11 @@ I like [filp/whoops](https://github.com/filp/whoops), so I will show how you can
 
 An alternative package would be: [PHP-Error](https://github.com/JosephLenton/PHP-Error)
 
-To install a new package, open up your `composer.json` and add the package to the require part. It should now look like this:
+To install a new package,
 
-```php
-"require": {
-    "php": ">=7.0.0",
-    "filp/whoops": "~2.1"
-},
 ```
-
-Now run `composer update` in your console and it will be installed.
+composer require filp/whoops
+```
 
 But you can't use it yet. PHP won't know where to find the files for the classes. For this you will need an autoloader, ideally a [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloader. Composer already takes care of this for you, so you only have to add a `require __DIR__ . '/../vendor/autoload.php';` to your `Bootstrap.php`.
 
