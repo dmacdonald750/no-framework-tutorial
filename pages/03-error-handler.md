@@ -20,7 +20,9 @@ Now add the error handler to your code:
 
 ```php
 $whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->pushHandler(function($e){
+    echo 'Todo: Friendly error page and send an email to the developer';
+});
 $whoops->register();
 ```
 
@@ -36,7 +38,10 @@ require __DIR__ . '/../vendor/autoload.php';
 * Register the error handler
 */
 $whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->pushHandler(function($e){
+    echo 'Todo: Friendly error page and send an email to the developer';
+});
+
 $whoops->register();
 
 throw new \Exception;
