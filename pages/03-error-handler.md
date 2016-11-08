@@ -4,8 +4,6 @@
 
 An error handler allows you to customize what happens if your code results in an error.  It is important to never show any errors in your production environment. A stack trace or even just a simple error message can help someone to gain access to your system. Always show a user friendly error page instead.
 
-A nice error page with a lot of information for debugging goes a long way during development. So the first package for your application will take care of that.
-
 I like [filp/whoops](https://github.com/filp/whoops), so I will show how you can install that package for your project. If you prefer another package, feel free to install that one. This is the beauty of programming without a framework, you have total control over your project.
 
 An alternative package would be: [PHP-Error](https://github.com/JosephLenton/PHP-Error)
