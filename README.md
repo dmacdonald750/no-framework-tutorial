@@ -17,7 +17,7 @@ So let's get started right away with the [first part](01-front-controller.md).
 ### Parts
 
 1. [Front Controller](pages/01-front-controller.md)
-2. [Composer](02-composer.md)
+2. [Composer](pages/02-composer.md)
 3. [Error Handler](03-error-handler.md)
 4. [HTTP](04-http.md)
 5. [Router](05-router.md)
