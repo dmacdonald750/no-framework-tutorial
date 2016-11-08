@@ -12,7 +12,7 @@ So my goal with this is to provide an easy resource that people can be pointed t
 
 **This tutorial was written for PHP 7.0 or newer versions.** If you are using an older version, please upgrade it before you start. I recommend that you use the [current stable version](http://php.net/downloads.php).
 
-So let's get started right away with the [first part](01-front-controller.md).
+So let's get started right away with the [first part](pages/01-front-controller.md).
 
 ### Parts
 
